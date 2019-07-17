@@ -1,0 +1,83 @@
+<div class="col-md-12 index_wall index_welcome">
+					<h3><strong>欢迎使用BMBlog！</strong></h3>
+					<h4>点击下方链接即可开始使用哦！</h4>
+					<div class="col-md-6 aurl">
+						<ul>
+							<li>
+								<a>
+									<span class="glyphicon glyphicon-pencil li_span" aria-hidden="true"></span>
+									撰写您的第一篇博文吧！
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-6 aurl">
+						<ul>
+							<li>
+								<a>
+									<span class="glyphicon glyphicon-th-list li_span" aria-hidden="true"></span>
+									管理您的分类吧！
+								</a>
+							</li>
+							<li>
+								<a>
+									<span class="glyphicon glyphicon-tags li_span" aria-hidden="true"></span>
+									管理您的标签吧！
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-12 index_wall index_preview">
+					<h3><strong>概览</strong></h3>
+					<div class="col-md-6 aurl">
+						<ul>
+							<li>
+								<a>
+									<span class="glyphicon glyphicon-book li_span" aria-hidden="true"></span>
+									<span>${articleCount }</span>
+									篇文章
+								</a>
+							</li>
+							
+						</ul>
+					</div><div class="col-md-6 aurl">
+						<ul>
+							<li>
+								<a>
+									<span class="glyphicon glyphicon-th-list li_span" aria-hidden="true"></span>
+									${sortCount }个分类
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-12  index_wall index_activity">
+					<h3><strong>活动</strong></h3>
+					<h4>最近发布</h4>
+					<table  id="newActicity">
+						<thead>
+							<tr>
+							  <td id="time_td">时间</td>
+							  <td>文章</td>
+							</tr>
+						</thead>
+						<tbody>
+						<jsp:useBean id="dateValue" class="java.util.Date"/>
+							<s:iterator value="articles">
+								<tr>
+									<td><jsp:setProperty name="dateValue" property="time" value="${time}"/>
+									<fmt:formatDate value="${dateValue}" pattern="yyyy/MM/dd HH:mm"/>
+									
+									</td>
+									<td><a href="${id }">${title }</a></td>
+								</tr>
+							
+							</s:iterator>
+							<tr>
+							  <td>时间</td>
+							  <td><a>文章</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>

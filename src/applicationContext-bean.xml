@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- - Application context definition for JPetStore's business layer. - Contains 
+	bean references to the transaction manager and to the DAOs in - dataAccessContext-local/jta.xml 
+	(see web.xml's "contextConfigLocation"). -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	
+	<!-- 实体Bean -->
+	<bean id="article" class="Pojo.Article" scope="prototype">
+	</bean>
+	<bean id="sort" class="Pojo.Sort" scope="prototype">
+	</bean>
+	<bean id="article_sort" class="Pojo.ArticleSort" scope="prototype">
+	</bean>
+	<bean id="tag" class="Pojo.Tag" scope="prototype">
+	</bean>
+	<bean id="article_tag" class="Pojo.ArticleTag" scope="prototype">
+	</bean>
+	<bean id="comment" class="Pojo.Comment" scope="prototype">
+	</bean>
+	
+	<!-- Dao Bean -->
+	<bean id="userDao" class="DAO.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="tagDao" class="DAO.TagDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="articleDao" class="DAO.ArticleDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="sortDao" class="DAO.SortDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="articleSortDao" class="DAO.ArticleSortDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="articleTagDao" class="DAO.ArticleTagDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="commentDao" class="DAO.CommentDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- Service Bean -->
+	<bean id="userService" class="Service.UserService">
+		<property name="ud" ref="userDao"></property>
+	</bean>
+	<bean id="tagService" class="Service.TagService">
+		<property name="atd" ref="articleTagDao"></property>
+		<property name="td" ref="tagDao"></property>
+		<property name="t" ref="tag"></property>
+	</bean>
+	<bean id="articleService" class="Service.ArticleService">
+		<property name="ad" ref="articleDao"></property>
+		<property name="sd" ref="sortDao"></property>
+		<property name="asd" ref="articleSortDao"></property>
+		<property name="a" ref="article"></property>
+		<property name="s" ref="sort"></property>
+		<property name="article_sort" ref="article_sort"></property>
+		<property name="td" ref="tagDao"></property>
+		<property name="atd" ref="articleTagDao"></property>
+		<property name="article_tag" ref="article_tag"></property>
+		<property name="t" ref="tag"></property>
+	</bean>
+	<bean id="sortService" class="Service.SortService">
+		<property name="asd" ref="articleSortDao"></property>
+		<property name="sd" ref="sortDao"></property>
+		<property name="s" ref="sort"></property>
+	</bean>
+	<bean id="commentService" class="Service.CommentService">
+		<property name="cd" ref="commentDao"></property>
+		<property name="c" ref="comment"></property>
+		<property name="a" ref="article"></property>
+		<property name="as" ref="articleService"></property>
+	</bean>
+	
+	
+	<!-- Action Bean -->
+	<bean id="indexAction" class="Action.IndexAction">
+		<property name="as" ref="articleService"></property>
+		<property name="ss" ref="sortService"></property>
+	</bean>
+	
+	<bean id="loginAction" class="Action.LoginAction">
+		<property name="us" ref="userService"></property>
+	</bean>
+	<bean id="tagAction" class="Action.TagAction">
+		<property name="ts" ref="tagService"></property>
+	</bean>
+	
+	<bean id="articleAction" class="Action.ArticleAction">
+		<property name="cs" ref="commentService"></property>
+		<property name="as" ref="articleService"></property>
+		<property name="a" ref="article"></property>
+	</bean>
+	<bean id="sortAction" class="Action.SortAction">
+		<property name="ss" ref="sortService"></property>
+	</bean>
+	<bean id="commentAction" class="Action.CommentAction">
+		<property name="cs" ref="commentService"></property>
+	</bean>
+	<bean id="imgUploadAction" class="Action.ImgUploadAction"></bean>
+</beans>

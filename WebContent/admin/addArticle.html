@@ -1,0 +1,71 @@
+
+<form action="ArticleSave" method="post">
+	<div class="col-md-9">
+		<input type="text" name="title" id="title" placeholder="请输入标题" />
+		<textarea id="editor" name="content" placeholder="内容...." autofocus></textarea>
+	</div>
+	<div class="col-md-3">
+		<div>
+			<button type="button" id="save_article_button" class="btn btn-success" style="width: 100%">发布</button>
+		</div>
+		<div class="ArticleSave_wall ArticleSave_Sort">
+			<h3>分类</h3><a class="shownewSort">添加新分类目录</a>
+			<div id="newSort">
+				新分类目录名 <input type="text" style="width: 100%;" id="newSort_input">
+				<button type="button" style="margin: 5px 0px 5px 0px;" id="newSort_button">添加新分类目录名</button>
+			</div>
+		</div>
+		<div class="ArticleSave_wall ArticleSave_Tag">
+			<h3>标签</h3>
+			<input type="hidden" id="tag" name="tag">
+			<div id="tag_div" class="tag_div_class">
+				<input type="text" id="tag_input">
+			</div>
+			<div id="tag_select">
+				<ul id="tag_select_ul">
+				</ul>
+			</div>
+		</div>
+		<div class="ArticleSave_wall">
+			<h3>摘要</h3>
+			<font></font>
+			<textarea maxlength="50"
+				style="font-size: 15px; width: 100%; height: 100px; resize: none; padding: 10px 5px 5px 5px;"
+				id="comment" name="summary" placeholder="摘要(最多50字)..."></textarea>
+		</div>
+		<div class="ArticleSave_wall ArticleSave_Image">
+			<h3>特色图片</h3>
+			<textarea id="image_url" name="image_url"></textarea>
+		</div>
+	</div>
+</form>
+<script>
+var editor = new Simditor(
+		{
+			textarea : $('#editor'),
+			cleanPaste :true,
+			pasteImage:true,
+			toolbar : [ 'title', 'bold', 'italic',
+					'underline', 'strikethrough',
+					'fontScale', 'color', 'ol', 'ul',
+					'blockquote', 'code', 'table', 'link',
+					'image', 'hr', 'indent', 'outdent',
+					'alignment' ],
+			upload : {
+				url : "imgAction.action",
+				fileKey : 'fileData',
+				leaveConfirm : '图片正在上传，确认要离开当前页面吗?',
+				connectionCount : 1
+			}
+		});
+var image_url = new Simditor({
+	textarea : $('#image_url'),
+	toolbar : [ 'image' ],
+	upload : {
+		url : "imgAction.action",
+		fileKey : 'fileData',
+		leaveConfirm : '图片正在上传，确认要离开当前页面吗?',
+		connectionCount : 1
+	}
+});
+</script>

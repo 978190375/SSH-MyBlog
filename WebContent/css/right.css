@@ -1,0 +1,75 @@
+@charset "UTF-8";
+*{
+	padding:0px;
+	margin:0px;
+}
+.right_wall{
+	margin-top:20px;
+}
+.right_wall h4{
+	color:#FFF;
+}
+.right_wall ul{
+	list-style:none;
+}
+.right_wall li{
+	background-color:#FFF;
+	width:100%;
+	padding:10px 15px 10px 15px;
+	margin-bottom:15px;
+	font-size:20px;
+	/*圆角 表示半径 IE9以下不支持*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+/*搜索框*/
+#article_key{
+	width:100%;
+	heighr:40px;
+	font-size:20px;
+	padding:5px;
+	
+	/*圆角 表示半径 IE9以下不支持*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+/*分类*/
+.right_li_sort{
+	cursor:pointer;
+}
+.right_li_sort:hover{
+	color:red;
+	cursor:pointer;
+}
+/*标签*/
+.right_li_tag {
+	overflow:hidden;
+}
+
+.right_li_tag font{
+	padding-right:10px;
+	display:inline-block;
+}
+.tag_font{
+	cursor:pointer;
+}
+.tag_font font{
+	padding:0px;
+}
+.tag_font:hover{
+	color:red;
+	cursor:pointer;
+}
+/*登陆*/
+#right_li_login{
+	
+	cursor:pointer;
+}
+#right_li_login:hover{
+	color:red;
+	cursor:pointer;
+}

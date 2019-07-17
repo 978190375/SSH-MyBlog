@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="struts" extends="struts-default">
+		<action name="login" class="loginAction" method="Login" >
+			<result name="success" type="redirectAction">index.action</result>
+			<result name="error">admin/login.jsp</result>
+		</action>
+	
+		<action name="index" class="indexAction" method="GetIndex" >
+			<result name="success">admin/index.jsp</result>
+		</action>
+		
+		<action name="imgAction" class="imgUploadAction" method="imgUpload" >
+		</action>
+		<action name="ArticleSave" class="articleAction" method="saveArticle" >
+		</action>
+		<!-- 文章更新 -->
+		<action name="updateArticle" class="articleAction" method="updateArticle" >
+		</action>
+		<action name="GetTag" class="tagAction" method="getTagsByInput" >
+		</action>
+		<action name="GetAllSort" class="sortAction" method="getAllSort" >
+		</action>
+		<action name="saveSort" class="sortAction" method="addSort" >
+		</action>
+		<!-- 后台获取所有文章 -->
+		<action name="GetAllArticleByJson" class="articleAction" method="GetArticleByJson">
+		</action>
+		<action name="getArticleDetailJSON" class="articleAction" method="getArticleDetailJSON">
+		</action>
+		<action name="deleteArticle" class="articleAction" method="deleteArticle">
+		</action>
+		<action name="GetSortByJson" class="sortAction" method="getSortByJson">
+		</action>
+		<action name="GetTagByJson" class="tagAction" method="getTagByJson">
+		</action>
+		<action name="saveTag" class="tagAction" method="addTag">
+		</action>
+		<!-- 后台 删除标签 -->
+		<action name="deleteTag" class="tagAction" method="deleteTag">
+		</action>
+		<action name="updateTag" class="tagAction" method="updateTag">
+		</action>
+		<!-- 后台 删除\更新分类 -->
+		<action name="deleteSort" class="sortAction" method="deleteSort">
+		</action>
+		<action name="updateSort" class="sortAction" method="updateSort">
+		</action>
+		
+		<!-- 后台评论 -->
+		
+		<action name="getAllComment" class="commentAction" method="getAllComment">
+		</action>
+		<action name="acceptComment" class="commentAction" method="acceptComment">
+		</action>
+		<action name="refuseComment" class="commentAction" method="refuseComment">
+		</action>
+		
+		<!-- 首页获取文章 -->
+		<action name="GetArtilceIndex" class="articleAction" method="GetArticleByJsonPage">
+		</action>
+		
+		<!-- 首页读取文章 -->
+		
+		<action name="GetArtilceDetail" class="articleAction" method="getArticleDetail">
+			<result name="success">article.jsp</result>
+		</action>
+		
+		<!-- 文章点赞 -->
+		<action name="addStar" class="articleAction" method="addStar">
+		</action>
+		<action name="deStar" class="articleAction" method="deStar">
+		</action>
+		
+		<!-- 文章评论 -->
+		<action name="addComment" class="commentAction" method="addComment">
+		</action>
+		
+		<!-- 评论点赞点踩 -->
+		<action name="commentAddStar" class="commentAction" method="addStar">
+		</action>
+		<action name="commentDeleteStar" class="commentAction" method="deStar">
+		</action>
+		<action name="commentAddDiss" class="commentAction" method="addDiss">
+		</action>
+		<action name="commentDeleteDiss" class="commentAction" method="deDiss">
+		</action>
+	</package>
+</struts>

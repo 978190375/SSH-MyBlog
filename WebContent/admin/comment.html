@@ -1,0 +1,96 @@
+<div class="col-md-12">
+	<h3>
+		<strong>评论审核</strong>
+	</h3>
+	<div>
+		<ul class="comments_ul">
+			<li class="comments_li">
+				<div class="col-md-12 article_title_div">
+				<a><span>这里是文章标题</span></a></div>
+				<div class="comments_list_left col-md-2">
+					<div class="tou"></div>
+					<p class="nickname">用户名</p>
+					<br>
+				</div>
+				<div class="comments_list_right col-md-9">
+					<div class="comments_list_right_top"style="width:100%"><p>评论内容<p></div>
+					<div class="comments_list_right_bottom"><span>2019-09-02</span></div>
+												 
+					 
+				</div>
+				<div class="comments_list_right_right col-md-1">
+					<input type="hidden" value="${comment.id }">
+					<div class="right_span right_span_accept">
+						<span >通过</span>
+					</div>
+					<div class="right_span right_span_refuse">
+						<span >删除</span>
+					 </div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>	
+<style>
+.tou{
+	width:60px;
+	height:60px;
+	line-height:40px;
+	background-color:#3A5FCD;
+	color:#FFF;
+	padding:10px;
+	font-size:40px;
+	text-align:center;
+	margin:0px auto;
+}
+.article_title_div{
+	height:30px;
+}
+.article_title_div span{
+	font-size:20px;
+}
+.comments_li{
+	list-style:none;
+	background-color:#FFF;
+	height:150px;
+}
+.comments_list_left{
+	padding:20px;
+	height:120px;	
+	text-align:center;
+	background-color:#EEE5DE;
+}
+.comments_list_right{
+	height:120px;	
+}
+.comments_list_right_top{
+	font-size:20px;
+	height:80px;
+}
+.comments_list_right_bottom{
+	height:20px;
+}
+.comments_list_right_right {
+	padding:0px;
+}
+.right_span{
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	font-size:20px;
+}
+.right_span_accept{
+	cursor:pointer;
+	color:green;
+}
+.right_span_accept:hover{    
+	background-color: rgb(193, 255, 193,0.2); 
+}
+.right_span_refuse{
+	cursor:pointer;
+	color:red;
+}
+.right_span_refuse:hover{
+ 	background-color: rgb(255, 218, 185,0.2);
+}  
+</style>
