@@ -38,61 +38,61 @@
   
 <h3>>功能模块描述<</h3>
   
-![image](https://github.com/978190375/SSH-/blob/master/image/action-index.png)<br>
-![image](https://github.com/978190375/SSH-/blob/master/image/action-background.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/action-index.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/action-background.png)<br>
 <h3>>数据库设计<</h3>
 
 <strong>Article表【文章表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_article.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_article.png)<br>
 <strong>Sort表【分类表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_sort.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_sort.png)<br>
 <strong>Tag表【标签表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_tag.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_tag.png)<br>
 <strong>Comment表【评论表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_comment.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_comment.png)<br>
 <strong>user表【用户表表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_user.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_user.png)<br>
 <strong>article_sort表【文章分类表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_article_sort.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_article_sort.png)<br>
 <strong>article_sort表【文章标签表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/mysql_article_tag.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/mysql_article_tag.png)<br>
 <h2>图片预览</h2>
 
 <strong>前台界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/FirstIndex.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/FirstIndex.png)<br>
 
 <strong>文章详情页</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/articleDetail.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/articleDetail.png)<br>
 
 <strong>文章详情下方文章点赞、添加评论、评论点赞</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/commentStar.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/commentStar.png)<br>
 
 <strong>分类页</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/sortArticle.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/sortArticle.png)<br>
 
 <strong>标签页</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/tagArticle.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/tagArticle.png)<br>
 
 <strong>后台登陆界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/index.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/index.png)<br>
 
 <strong>后台首页界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/backgroundIndex.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/backgroundIndex.png)<br>
 
 <strong>后台所有文章界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/allArticle.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/allArticle.png)<br>
 
 <strong>后台文章发布界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/addArticle.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/addArticle.png)<br>
 
 <strong>后台文章修改界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/editArticle.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/editArticle.png)<br>
 
 <strong>后台分类功能界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/Sort.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/Sort.png)<br>
 
 <strong>后台标签功能界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/Tag.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/Tag.png)<br>
 
 <strong>评论审核界面</strong><br><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/comment.png)<br>
+![image](https://github.com/978190375/SSH-MyBlog/blob/master/image/comment.png)<br>
