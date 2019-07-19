@@ -35,10 +35,13 @@
 11)	文章查询：通过Action跳转获取所有文章信息，进行异步加载剩余文章<br>
 12)	文章、评论点赞：通过Ajax直接传入相关文章或评论ID，进行更新<br>
 13)	追加评论：对文章进行评论，并通过Ajax进行提交保存。<br>
+  
 <h3>>功能模块描述<</h3>
+  
 ![image](https://github.com/978190375/SSH-/blob/master/image/action-index.png)<br>
 ![image](https://github.com/978190375/SSH-/blob/master/image/action-background.png)<br>
 <h3>>数据库设计<</h3>
+
 <strong>Article表【文章表】</strong><br>
 ![image](https://github.com/978190375/SSH-/blob/master/image/mysql_article.png)<br>
 <strong>Sort表【分类表】</strong><br>
@@ -48,7 +51,7 @@
 <strong>Comment表【评论表】</strong><br>
 ![image](https://github.com/978190375/SSH-/blob/master/image/mysql_comment.png)<br>
 <strong>user表【用户表表】</strong><br>
-![image](https://github.com/978190375/SSH-/blob/master/image/action-index.png)<br>
+![image](https://github.com/978190375/SSH-/blob/master/image/mysql_user.png)<br>
 <strong>article_sort表【文章分类表】</strong><br>
 ![image](https://github.com/978190375/SSH-/blob/master/image/mysql_article_sort.png)<br>
 <strong>article_sort表【文章标签表】</strong><br>
